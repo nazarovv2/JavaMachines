@@ -29,12 +29,7 @@ public class Chat {
     private Integer authorId;
 
     @ManyToMany
-    @JoinTable(name = "chat_users",
-            inverseJoinColumns = {
-                    @JoinColumn(name = "users_id")
-            },
-            joinColumns = {
-                    @JoinColumn
-                            (name = "chats_id")})
+    @JoinTable(name = "chat_users", inverseJoinColumns = {@JoinColumn(name = "users_id")},
+            joinColumns = {@JoinColumn(name = "chats_id")})
     private List<User> users;
 }

@@ -13,12 +13,14 @@ import java.util.List;
 
 @ResponseStatus
 @RequiredArgsConstructor
+@RestController
+@RequestMapping("/chat")
 public class ChatResource {
 
     private final ChatService chatService;
 
     @ApiOperation(value = "Add new chat", nickname = "add chat")
-    @PostMapping
+    @PostMapping("/add")
     public ResponseDTO<Integer> addChat(@RequestBody ChatDTO chatDTO){
         return chatService.addChat(chatDTO);
     }
@@ -31,7 +33,7 @@ public class ChatResource {
     }
 
     @ApiOperation(value = "List of all chats. Returns chat's author too.")
-    @GetMapping
+    @GetMapping("/all-chats")
     public ResponseDTO<List<ChatCustomDTO>> allChats(){
         return chatService.getAll();
     }

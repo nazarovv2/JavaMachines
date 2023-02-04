@@ -15,13 +15,14 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
+@RequestMapping("/message")
 @RequiredArgsConstructor
 public class MessageResource {
 
     private final MessageService messageService;
 
     @ApiOperation(value = "Write message to a chat. Type of message must be either TEXT or IMAGE")
-    @PostMapping
+    @PostMapping("/add")
     public ResponseDTO<Integer> add(@RequestBody MessageDTO messageDTO) throws IOException {
         return messageService.add(messageDTO);
     }
