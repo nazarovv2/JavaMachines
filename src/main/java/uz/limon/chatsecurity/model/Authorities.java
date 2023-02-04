@@ -8,6 +8,7 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class Authorities {
 
     @Id

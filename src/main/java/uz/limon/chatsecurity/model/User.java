@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 public class User implements UserDetails {
 
     @Id

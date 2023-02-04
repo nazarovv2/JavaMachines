@@ -9,6 +9,7 @@ import java.util.Date;
 
 @Getter
 @Setter
+@Entity
 public class Message {
 
     @Id

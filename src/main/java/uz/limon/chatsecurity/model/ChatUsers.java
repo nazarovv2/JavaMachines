@@ -9,6 +9,7 @@ import javax.persistence.*;
 
 @Getter
 @Setter
+@Entity
 public class ChatUsers {
 
     @Id

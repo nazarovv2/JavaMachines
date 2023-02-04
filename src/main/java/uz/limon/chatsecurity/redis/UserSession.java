@@ -3,6 +3,7 @@ package uz.limon.chatsecurity.redis;
 import lombok.*;
 import org.springframework.data.redis.core.RedisHash;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Getter
@@ -10,6 +11,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Entity
 public class UserSession {
 
     @Id
